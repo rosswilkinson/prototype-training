@@ -23,6 +23,9 @@ app.locals.assetPath = '/';
 app.locals.localAssets = '/';
 app.locals.isDev = app.get('env') === 'development';
 
+var webPort;
+webPort = process.env.PORT || 3000;
+
 app.use(favicon(
   path.join(__dirname, 'global', 'public', 'images', 'favicon.ico')));
 
@@ -110,4 +113,6 @@ if (app.locals.isDev) {
 // global controllers
 require('./lib/controllers/index.js')(app);
 
-app.listen(process.env.PORT || 3000);
+app.listen(webPort);
+
+console.log("Starting express web server http://localhost:" + webPort);
