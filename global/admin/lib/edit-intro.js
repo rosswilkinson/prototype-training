@@ -14,21 +14,18 @@ module.exports = function (app) {
     });
   });
 
-  //app.post('/edit-intro', editIteration(function (subapp) {
-  //  return function (req, res) {
-  //    var meta = {
-  //      h1 : req.body.h1,
-  //      description : req.body.description
-  //    };
-//
-  //    var newPath = path.join(cwd, 'app', req.body.path);
-  //    fs.writeJsonSync(
-  //        path.join(cwd, 'app', req.params.iteration, 'meta.json'), meta);
-  //    fs.rename(path.join(cwd, 'app', req.params.iteration), newPath);
-//
-  //    res.redirect('../../');
-  //    util.restartApp();
-  //  };
-  //}));
+  app.post('/edit-intro', function (req, res) {
+
+    var meta = {
+      h1: req.body.h1,
+      description: req.body.description
+    };
+
+    fs.writeJsonSync(path.join(cwd + '/global/admin', 'meta.json'), meta);
+
+    res.redirect('../../');
+    util.restartApp();
+
+  });
 
 }
