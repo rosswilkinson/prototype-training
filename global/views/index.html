@@ -9,8 +9,14 @@
 <div class="grid-row">
 	<div class="column-two-thirds">
 
-		<h1 class="heading-xlarge">Your prototype name</h1>
-        <p class="lede">General paragraph for your prototype, information regarding the service the prototype is for etc.</p>
+          <div class="panel panel-border-wide">
+                  <a href="/admin/edit-intro" class="button">Edit Introduction</a>
+          </div>
+
+    {{#intro}}
+		<h1 class="heading-xlarge">{{h1}}</h1>
+        <p class="lede">{{description}}</p>
+    {{/intro}}
         
         {{#isDev}}
         <div class="panel panel-border-wide">
