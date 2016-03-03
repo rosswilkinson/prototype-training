@@ -8,15 +8,19 @@
 
 <div class="grid-row">
 	<div class="column-two-thirds">
+    {{#isDev}}
+    <div class="panel-edit">
+      <a href="/admin/edit-intro" class="button">Edit Introduction</a>
 
-          <div class="panel panel-border-wide">
-                  <a href="/admin/edit-intro" class="button">Edit Introduction</a>
-          </div>
+    {{/isDev}}
 
     {{#intro}}
 		<h1 class="heading-xlarge">{{h1}}</h1>
         <p class="lede">{{description}}</p>
     {{/intro}}
+    {{#isDev}}
+  </div>
+  {{/isDev}}
         
         {{#isDev}}
         <div class="panel panel-border-wide">
