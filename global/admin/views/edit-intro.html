@@ -15,7 +15,6 @@
 
 			<h1 class="heading-xlarge">Edit the introduction text</h1>
 
-			{{#intro}}
 			<form method="post">
 				<fieldset>
 					<div class="form-group">
@@ -23,7 +22,7 @@
 							Heading
 							<span class="form-hint">Change the heading text</span>
 						</label>
-						<input name="h1" class="form-control" value="{{h1}}"></input>
+						<input name="h1" class="form-control" value="{{intro.h1}}"></input>
 					</div>
 
 					<div class="form-group">
@@ -31,14 +30,13 @@
 							Description
 							<span class="form-hint">Change the description text</span>
 						</label>
-						<textarea name="description" class="form-control" cols="40" rows="5" >{{description}}</textarea>
+						<textarea name="description" class="form-control" cols="40" rows="5" >{{intro.description}}</textarea>
 					</div>
 
 				</fieldset>
 
 				<button class="button">Make changes</button>
 			</form>
-			{{/intro}}
 
 		</div>
 		<div class="column-third">
