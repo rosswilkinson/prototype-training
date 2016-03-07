@@ -69,6 +69,10 @@ app.use('/public/images/icons',
 // as sub app mounted at the prefix of the name
 // of the folder
 glob.sync(__dirname + '/app/*')
+  .filter(function (e) {
+    var meta = fs.readJsonSync(path.join(path.dirname(e), 'meta.json'));
+    return app.locals.isDev || !meta.hidden;
+  })
   .map(function (e) {
 
     var p = './' + path.relative(
