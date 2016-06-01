@@ -1,0 +1,59 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$main}}
+            
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">Bank account details</h1>
+          <p class="lede">
+              HM Revenue and Customs need the details of the bank, building society or credit union account that you want your [Insert total]  refund paid into.</p>
+          <p>
+              Refunds are paid using BACS, so make sure your account accepts this type of payment.
+          </p>
+        
+          <div class="panel panel-border-wide">
+          <p>
+              This account must belong to you. Refunds cannot be paid into another person's account.
+          </p>
+          </div>
+        <p>
+            Name<br>
+            [Insert name]
+        
+        </p>
+            <div class="form-group">
+                <label class="form-label" for="a-number">
+                    Account number
+                    <span class="form-hint">
+                        It's the 8 digit number shown on your bank card and statements. For example 12345678.
+                    </span>
+                </label>
+            <input class="form-control" id="a-number" type="text">
+            </div>
+        
+        <div class="form-group">
+            <label class="form-label" for="s-code">
+                Sort code   
+                <span class="form-hint">
+                    It's the 6  digit number shown on your bank card and statements. For example 123456 12-34-56.
+                </span>
+            </label>
+        <input class="form-control" id="s-number" type="text">
+        </div>
+        <input class="button" type="submit" value="Continue">
+        
+        
+    </div>
+
+
+  </div>
+
+
+{{/main}}
+
+{{/layout}}
